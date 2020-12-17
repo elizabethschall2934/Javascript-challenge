@@ -1,11 +1,22 @@
 // from data.js
 var tableData = data;
 
-// Select the button
-var button = d3.select("#button");
+// Select the filter
+var button = d3.select("#filter-btn");
 
 // Select the form
-var form = d3.select("#form");
+var form = d3.select("#datetime");
+
+var tbody = d3.select("#tbody");
+
+ // Select the input element and get the raw HTML node
+ var inputElement = d3.select("#datetime");
+
+ // Get the value property of the input element
+ var inputValue = inputElement.property("value");
+
+ console.log(inputValue);
+
 
 // Create event handlers 
 button.on("click", runEnter);
