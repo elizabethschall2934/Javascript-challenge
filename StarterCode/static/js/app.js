@@ -7,10 +7,25 @@ var button = d3.select("#filter-btn");
 // Select the form
 var form = d3.select("#datetime");
 
-var tbody = d3.select("#tbody");
-
  // Select the input element and get the raw HTML node
  var inputElement = d3.select("#datetime");
+
+ // Funtion to show table info
+function tableShow(ufoInfo) {
+
+  var tbody = d3.select("tbody");
+  
+  ufoInfo.forEach((ufo) => {
+      var line = tbody.append("tr");
+
+      Object.entries(ufo).forEach(([key, value]) => {
+          var box = line.append("td");
+          box.text(value);
+      });
+  });
+};
+tableShow(tableData);
+
 
  // Get the value property of the input element
  var inputValue = inputElement.property("value");
