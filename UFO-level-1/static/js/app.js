@@ -10,10 +10,12 @@ var form = d3.select("#datetime");
  // Select the input element and get the raw HTML node
  var inputElement = d3.select("#datetime");
 
+ var tbody = d3.select("tbody");
+
  // Funtion to show table info
 function tableShow(ufoInfo) {
 
-  var tbody = d3.select("tbody");
+  document.getElementById('table-content').innerHTML="";
   
   ufoInfo.forEach((ufo) => {
       var line = tbody.append("tr");
