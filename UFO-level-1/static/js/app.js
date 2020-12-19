@@ -29,18 +29,31 @@ function tableShow(ufoInfo) {
 tableShow(tableData);
 
 
- // Get the value property of the input element
- var inputValue = inputElement.property("value");
+//  // Get the value property of the input element
+//  var inputValue = inputElement.property("value");
+// // Create event handlers 
+// function runEnter() {
 
- console.log(inputValue);
+// button.on("click", runEnter(){
+//   // Prevent the page from refreshing
+//   d3.event.preventDefault();
 
+// // Display filtered data on console
+// console.log(ufoInfo);
+// }
 
-// Create event handlers 
-button.on("click", runEnter);
-form.on("submit",runEnter);
-
-// Complete the event handler function for the form
-function runEnter() {
-
-  // Prevent the page from refreshing
-  d3.event.preventDefault();
+// // Loop through filered data and append to table
+// filteredData.forEach(ufo => {
+//     var line = tbody.append("tr");
+//     Object.entries(ufo).forEach(([key, value]) => {
+//         var box = line.append("td");
+//         box.text(value);
+//     })
+//     // Displays table 
+// data.forEach(ufo => {
+//     var line = tbody.append("tr");
+//     Object.entries(ufo).forEach(([key, value]) => {
+//         var box = row.append("td");
+//         box.text(value);
+//     })
+// });
