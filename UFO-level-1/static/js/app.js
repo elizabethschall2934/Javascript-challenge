@@ -15,7 +15,7 @@ var form = d3.select("#datetime");
  // Funtion to show table info
 function tableShow(ufoInfo) {
 
-  document.getElementById('table-content').innerHTML="";
+  document.getElementById("table-content").innerHTML="";
   
   ufoInfo.forEach((ufo) => {
       var line = tbody.append("tr");
@@ -28,19 +28,21 @@ function tableShow(ufoInfo) {
 };
 tableShow(tableData);
 
+// Create event handlers 
+button.on("click", function() {
 
-//  // Get the value property of the input element
-//  var inputValue = inputElement.property("value");
-// // Create event handlers 
-// function runEnter() {
+  // Prevent the page from refreshing
+  d3.event.preventDefault();
 
-// button.on("click", runEnter(){
-//   // Prevent the page from refreshing
-//   d3.event.preventDefault();
+// Get the value property of the input element
+var inputDate = inputElement.property("value");
 
-// // Display filtered data on console
-// console.log(ufoInfo);
-// }
+// filter the table with input valie
+var filteredData = tableData.filter(ufoInfo => ufoInfo.datetime === inputDate);
+
+// Display filtered data on console
+console.log(filteredData);
+});
 
 // // Loop through filered data and append to table
 // filteredData.forEach(ufo => {
