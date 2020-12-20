@@ -40,22 +40,7 @@ var inputDate = inputElement.property("value");
 // filter the table with input valie
 var filteredData = tableData.filter(ufoInfo => ufoInfo.datetime === inputDate);
 
-// Display filtered data on console
-console.log(filteredData);
-});
-
-// // Loop through filered data and append to table
-// filteredData.forEach(ufo => {
-//     var line = tbody.append("tr");
-//     Object.entries(ufo).forEach(([key, value]) => {
-//         var box = line.append("td");
-//         box.text(value);
-//     })
-//     // Displays table 
-// data.forEach(ufo => {
-//     var line = tbody.append("tr");
-//     Object.entries(ufo).forEach(([key, value]) => {
-//         var box = row.append("td");
-//         box.text(value);
-//     })
-// });
+// // Display filtered data on console
+// console.log(filteredData);
+tableShow(filteredData);
+  });
